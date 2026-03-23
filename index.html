@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neuroathletix | High Performance Training</title>
+  <meta name="description" content="Neuroathletik Training für High Performance. Optimiere dein Nervensystem für bessere Reaktionen, Gleichgewicht und sportliche Höchstleistung.">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Neuroathletix | High Performance Training">
+  <meta property="og:description" content="Optimiere dein Nervensystem für bessere Reaktionen und sportliche Höchstleistung.">
+  <meta property="og:image" content="https://deine-website.at/img/Leuchtathlet.png">
+  <meta property="og:url" content="https://deine-website.at">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="img/my-icon.png">
+  <link rel="apple-touch-icon" href="img/my-icon.png">
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero" id="start">
+    <img src="img/Leuchtathlet.png" alt="Leuchtathlet" class="hero-bg">
+    <div class="hero-content">
+      <span>High Performance Neuroathletik</span>
+      <h1>Trainiere dein Nervensystem<br>Steigere deine <br><span class="highlightLeistung">Leistung</span>
+    </h1>
+      <p>
+        Neuroathletik ist für ambitionierte Athleten, die schneller reagieren,
+        stabiler performen und ihr volles Potenzial abrufen wollen.
+      </p>
+      <a href="#kontakt" class="btn">Training anfragen</a>
+    </div>
+  </section>
+
+  <!-- WAS IST NEUROATHLETIK -->
+  <section id="neuro">
+    <h2>Was ist Neuroathletik?</h2>
+    <p class="usp">
+      Neuroathletik optimiert die Kommunikation zwischen Gehirn und Körper –
+        für mehr Geschwindigkeit, Präzision und Kontrolle im Training und Wettkampf.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>👁 Visuelles System</h3>
+        <p>Reaktionszeit, Tiefenwahrnehmung und Blickstabilität für Spielübersicht und Präzision.</p>
+      </div>
+
+      <div class="card">
+        <h3>⚖ Gleichgewichtssystem</h3>
+        <p>Stabilität unter Druck, saubere Kraftübertragung und bessere Körperkontrolle.</p>
+      </div>
+
+      <div class="card">
+        <h3>🧠 Körperwahrnehmung</h3>
+        <p>Effiziente Bewegungen, weniger Verletzungen und maximale Leistungsfähigkeit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP -->
+  <section id="vorteile">
+    <h2>Warum dieses Training?</h2>
+
+    <div class="usp">
+      <p>
+        Kein Standardprogramm. Jedes Training basiert auf neurologischen Tests
+        und wird individuell an deine Sportart, Position und Ziele angepasst.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Evidenzbasiert</h3>
+        <p>Neuro-wissenschaftlich fundierte Methoden statt Trends.</p>
+      </div>
+
+      <div class="card">
+        <h3>Individuell</h3>
+        <p>Maßgeschneidertes Training für dein Nervensystem.</p>
+      </div>
+
+      <div class="card">
+        <h3>Messbar</h3>
+        <p>Fortschritt sichtbar durch Tests & Performance-Feedback.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANGEBOTE -->
+  <section id="angebote">
+    <h2>Angebote</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1:1 Athletentraining</h3>
+        <p>Individuelle Leistungsdiagnostik & gezieltes Neurotraining.</p>
+      </div>
+
+      <div class="card">
+        <h3>Team- & Gruppentraining</h3>
+        <p>Optimiert Reaktion, Stabilität und Entscheidungsfindung im Team.</p>
+      </div>
+
+      <div class="card">
+        <h3>Workshops für Trainer</h3>
+        <p>Neuroathletik praxisnah in Training und Wettkampf integrieren.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="kontakt">
+    <div class="cta">
+      <h2>Bereit für das nächste Leistungslevel?</h2>
+      <p>Starte jetzt mit einem unverbindlichen Erstgespräch.</p>
+     <a href="kontakt.html" class="btn">Kontakt aufnehmen</a>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Neuroathletik High Performance · Alle Rechte vorbehalten<br>
+    <br>
+    <a href="impressum.html" style="color: var(--text-secondary); text-decoration: none;">Impressum</a>
+    &nbsp; | &nbsp;
+    <a href="datenschutz.html" style="color: var(--text-secondary); text-decoration: none;">Datenschutz</a>
+  </footer>
+
+ <script>
+  const sections = document.querySelectorAll("section");
+  const desktopLinks = document.querySelectorAll(".side-nav a");
+  const mobileNav = document.querySelector(".mobile-nav");
+  const mobileLinks = document.querySelectorAll(".mobile-nav a");
+
+  let lastScrollY = window.pageYOffset;
+  let ticking = false;
+
+  function updateActiveLink() {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - window.innerHeight / 2;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    [...desktopLinks, ...mobileLinks].forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  function handleMobileNav() {
+    if (!mobileNav) return;
+
+    const currentScrollY = window.pageYOffset;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 150) {
+      // Scroll DOWN
+      mobileNav.classList.add("hide");
+    } else {
+      // Scroll UP
+      mobileNav.classList.remove("hide");
+    }
+
+    lastScrollY = currentScrollY;
+  }
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateActiveLink();
+        handleMobileNav();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+</script>
+
+<nav class="side-nav">
+  <a href="#start" data-label="Start"></a>
+  <a href="#neuro" data-label="Neuroathletik"></a>
+  <a href="#vorteile" data-label="Vorteile"></a>
+  <a href="#angebote" data-label="Angebote"></a>
+  <a href="#kontakt" data-label="Kontakt"></a>
+</nav>
+
+<nav class="mobile-nav">
+  <a href="#start">Start</a>
+  <a href="#neuro">Neuro</a>
+  <a href="#vorteile">Vorteile</a>
+  <a href="#angebote">Angebote</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
+</body>
+
+</html>

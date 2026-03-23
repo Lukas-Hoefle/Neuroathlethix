@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt | Neuroathletik High Performance</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/my-icon.png">
+  <link rel="apple-touch-icon" href="img/my-icon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0B1320;
+      --bg-card: #121C2D;
+      --accent: #18E0C4;
+      --text-main: #FFFFFF;
+      --text-secondary: #B8C1CC;
+      --divider: #233044;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 100px 10%;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: var(--text-secondary);
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .person {
+      background: var(--bg-card);
+      border: 1px solid var(--divider);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .person img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .person h3 {
+      margin-bottom: 5px;
+    }
+
+    .role {
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-info {
+      font-size: 0.9rem;
+    }
+
+    .contact-info a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: block;
+      margin-top: 6px;
+    }
+
+    .contact-info a:hover {
+      color: var(--accent);
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 60px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* USP */
+    .usp {
+      border-left: 4px solid var(--accent);
+      padding-left: 25px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<section>
+  <h1>Kontakt & Team</h1>
+  <p class="usp">
+    Persönlicher Kontakt ist uns wichtig.  
+    Melde dich direkt bei uns für ein unverbindliches Erstgespräch.
+  </p>
+
+  <div class="team">
+
+    <!-- PERSON 1 -->
+    <div class="person">
+      <img src="person1.jpg" alt="Name Person 1">
+      <h3>Lukas Höfle</h3>
+      <div class="role">Neuroathletik Trainer</div>
+      <div class="contact-info">
+        <a href="mailto:hoefle.lukas@gmx.net">hoefle.lukas@gmx.net</a>
+        <a href="tel:+436507925249">+43 650 7925249</a>
+      </div>
+    </div>
+
+    <!-- PERSON 2 -->
+    <div class="person">
+      <img src="person2.jpg" alt="Name Person 2">
+      <h3>Name Person 2</h3>
+      <div class="role">Performance Coach</div>
+      <div class="contact-info">
+        <a href="mailto:email2@domain.at">email2@domain.at</a>
+        <a href="tel:+436601112233">+43 660 1112233</a>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="back">← Zurück zur Startseite</a>
+</section>
+
+</body>
+</html>
