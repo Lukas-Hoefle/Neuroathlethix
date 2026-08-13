@@ -88,9 +88,11 @@
     }
 
     .hero p {
-      margin-top: 20px;
-      font-size: 1.1rem;
-    }
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #d7e6ec;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+}
 
     .btn {
       display: inline-block;
@@ -312,5 +314,13 @@ html {
 
   .hero-content {
     max-width: 100%;
+  }
+
+  .cta {
+    padding: 40px 24px;
+  }
+
+  .cta h2 {
+    overflow-wrap: break-word;
   }
 }
