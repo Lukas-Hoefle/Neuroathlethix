@@ -322,5 +322,6 @@ html {
 
   .cta h2 {
     overflow-wrap: break-word;
+    font-size: 1.6rem;
   }
 }
